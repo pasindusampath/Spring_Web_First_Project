@@ -37,6 +37,11 @@
                         <form:options items="${student.cityData}"/>
                     </form:select>
                     <hr>
+                    HNB:<form:checkbox path="accounts" value="hnb"/>
+                    NSB:<form:checkbox path="accounts" value="nsb"/>
+                    BOC:<form:checkbox path="accounts" value="bos"/>
+                    DFCC:<form:checkbox path="accounts" value="dfcc"/>
+                    NTB:<form:checkbox path="accounts" value="ntb"/>
                 </div>
                 <input type="submit" value="submit" placeholder="submit">
             </div>

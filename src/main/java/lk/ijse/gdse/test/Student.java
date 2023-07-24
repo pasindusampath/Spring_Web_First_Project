@@ -1,5 +1,6 @@
 package lk.ijse.gdse.test;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 
 public class Student {
@@ -9,17 +10,19 @@ public class Student {
     private String city;
     private String studentId;
     private LinkedHashMap<String,String> cityData;
+    private String[] accounts;
     public Student(){
         cityData=new DataBase().map;
     }
 
-    public Student(String studentName, String studentAddress, String studentMobileNo, String city, String studentId, LinkedHashMap<String, String> cityData) {
+    public Student(String studentName, String studentAddress, String studentMobileNo, String city, String studentId, LinkedHashMap<String, String> cityData, String[] accounts) {
         this.studentName = studentName;
         this.studentAddress = studentAddress;
         this.studentMobileNo = studentMobileNo;
         this.city = city;
         this.studentId = studentId;
         this.cityData = cityData;
+        this.accounts = accounts;
     }
 
     public String getStudentId() {
@@ -70,6 +73,14 @@ public class Student {
         this.studentMobileNo = studentMobileNo;
     }
 
+    public String[] getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(String[] accounts) {
+        this.accounts = accounts;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -79,6 +90,7 @@ public class Student {
                 ", city='" + city + '\'' +
                 ", studentId='" + studentId + '\'' +
                 ", cityData=" + cityData +
+                ", accounts=" + Arrays.toString(accounts) +
                 '}';
     }
 }

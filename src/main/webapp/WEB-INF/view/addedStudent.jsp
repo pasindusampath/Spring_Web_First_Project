@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%--
   Created by IntelliJ IDEA.
   User: Pasindu Sampath
@@ -14,5 +16,11 @@
 <body>
  name : ${student.studentName}
  address : ${student.city}
+ <ul>
+     <c:forEach var="data" items="${student.accounts}">
+         <li>${data}</li>
+     </c:forEach>
+ </ul>
+
 </body>
 </html>

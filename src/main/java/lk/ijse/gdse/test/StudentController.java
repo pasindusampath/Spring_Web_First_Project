@@ -5,9 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 
-@Controller("students")
+
+@Controller()
+@RequestMapping("students")
 public class StudentController {
 
     @RequestMapping("student")
